@@ -7,5 +7,4 @@ textInput.addEventListener("blur", (event) => {
    event.currentTarget.value.length === textInputDataLenght ?  
    textInput.classList.add('valid') : 
    textInput.classList.add('invalid')
-console.log('??????????')
 });
