@@ -6,11 +6,11 @@ const controlInput = document.querySelector("#controls>input");
 const createBtn = document.querySelector("[data-create]");
 const destroyBtn = document.querySelector("[data-destroy]");
 const boxContainer = document.querySelector("#boxes");
+let width = 30;
+let height = 30;
 
 function createBoxes(amount) {
   const boxes = [];
-  let width = 30;
-  let height = 30;
 
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement("div");
@@ -27,6 +27,8 @@ function createBoxes(amount) {
 function destroyBoxes() {
   const allBoxes = boxContainer.querySelectorAll("div");
   allBoxes.forEach((box) => box.remove());
+  width = 30;
+  height = 30;
 }
 
 createBtn.addEventListener("click", () => createBoxes(controlInput.value));
