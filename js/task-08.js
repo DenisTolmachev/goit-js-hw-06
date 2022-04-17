@@ -1,18 +1,18 @@
-const loginForm = document.querySelector('.login-form');
+const loginForm = document.querySelector(".login-form");
 
-loginForm.addEventListener('submit', (event) => {
-   event.preventDefault();
-   
-   const {
-      elements: {email, password}
-   } = event.currentTarget;
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-   if (email.value === '' || password.value === '') {
-      return alert('Bсе поля должны быть заполнены!!!')
-   }
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
 
-   const data = {email:email.value, password:password.value};
-   console.log(data);
+  if (email.value === "" || password.value === "") {
+    return alert("Bсе поля должны быть заполнены!!!");
+  }
 
-   event.currentTarget.reset();
+  const data = { email: email.value, password: password.value };
+  console.log(data);
+
+  event.currentTarget.reset();
 });
